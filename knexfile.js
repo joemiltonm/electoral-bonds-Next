@@ -4,6 +4,9 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
+import { config } from 'dotenv';
+config();
+
 
 const development = {
     client: 'pg',
