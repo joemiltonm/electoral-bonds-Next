@@ -1,9 +1,15 @@
-import { Button, Group } from "@mantine/core";
+import React from 'react';
+import '@mantine/core/styles.css';
+import Routing from '../components/Routing';
 
-export default function IndexPage() {
+export default function Home() {
+
   return (
-    <Group mt={50} justify="center">
-      <Button size="xl">Welcome to Mantine!</Button>
-    </Group>
-  );
+      <div>   
+        <Routing/>
+      </div>
+  )
 }
+
+
+
