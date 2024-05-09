@@ -49,7 +49,7 @@ export const barOptionsLeft = {
       max: 'dataMax',
       splitNumber: 5,
       axisLabel: {
-          formatter: function (params) {
+          formatter: function (params:any) {
               return params + " cr";
           }
       }

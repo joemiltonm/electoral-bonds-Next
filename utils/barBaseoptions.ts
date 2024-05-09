@@ -16,10 +16,10 @@ export const barBaseOption = {
       // Use axis to trigger tooltip
       type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
         },
-    formatter: function (params) {
+    formatter: function (params:any) {
             // params is an array if trigger is 'axis', or a single object if trigger is 'item'
         let tip = '';
-            params.forEach(function (item) {
+            params.forEach(function (item:any) {
                 // Assuming value is a number and formatted as needed
                 if (item.value.toFixed(2) > 1) {
                     tip += item.marker + item.name + ': ' + item.value.toFixed(2) + ' crores<br/>'
@@ -49,7 +49,7 @@ export const barBaseOption = {
       max: 'dataMax',
       splitNumber: 5,
       axisLabel: {
-          formatter: function (params) {
+          formatter: function (params:any) {
               return params + " cr";
           }
       }
