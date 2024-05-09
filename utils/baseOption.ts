@@ -19,7 +19,8 @@ export let baseOption = {
                 name: 'Access From',
                 center: ['60%', '55%'],
                 type: 'pie',
-                radius: '80%',
+                    radius: '80%',
+                data:[],
                 emphasis: {
                     itemStyle: {
                     shadowBlur: 10,
@@ -37,7 +38,7 @@ export let baseOption = {
                 ],
             tooltip: {
                     trigger: 'item', // Can be 'item', 'axis', or 'none'
-                formatter: function (params) {
+                formatter: function (params:any) {
                     let tip = ""
                     if (params.value.toFixed(2) > 1) {
                         tip += params.marker + params.name + ': ' + params.value.toFixed(2) + ' crores (' + params.percent + '%)<br/>'

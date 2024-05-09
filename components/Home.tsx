@@ -30,9 +30,9 @@ export default function Home() {
                 
             </Tabs.Panel> */}
 
-            <Tabs.Panel value="questions">
+            {/* <Tabs.Panel value="questions">
                 <QuestionsTab/>
-            </Tabs.Panel>
+            </Tabs.Panel> */}
         </Tabs>
   )
 

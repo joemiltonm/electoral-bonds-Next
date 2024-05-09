@@ -10,7 +10,7 @@ function QuestionsTab() {
     const [q1Answer, setQ1Answer] = useState('');
     const [showAnswer, setShowAnswer] = useState(false);
 
-    const getPartyList = (event) => {
+    const getPartyList = (event : any) => {
         fetch("http://localhost:3001/questions/q1", {
             method: "POST",
             headers: {
@@ -41,8 +41,8 @@ function QuestionsTab() {
         }).then(res => res.json())
             .then(data => {
                 const {formattedData, formattedDataPurchase} = data
-                const plist = formattedData.map(item => item.name)
-                const dlist = formattedDataPurchase.map(item=>item.name)
+                const plist = formattedData.map((item:any) => item.name)
+                const dlist = formattedDataPurchase.map((item:any)=>item.name)
                 setPartyList(plist)
                 setDonorList(dlist)
         })

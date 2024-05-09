@@ -13,15 +13,12 @@ export default function Rightpane() {
 
         setOptions(barBaseOption)
 
-        fetch("http://localhost:3001/staticData/total", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }).then(res => res.json()).then(data => {
+        fetch('http://localhost:3000/api/bond').then(res => res.json()).
+        then(data =>
+        {
             const { formattedData } = data;
-            const name = formattedData.map(item => item.name) 
-            const value = formattedData.map(item => item.value)  
+            const name = formattedData.map((item:any) => item.name) 
+            const value = formattedData.map((item:any) => item.value)  
             setOptions({
                 ...barBaseOption,
                 yAxis: { ...barBaseOption, data: name },

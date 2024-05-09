@@ -7,26 +7,19 @@ import ReactECharts from 'echarts-for-react';
 import { Flex, Paper, Text, NumberFormatter } from '@mantine/core';
 import FyChart from './FyChart';
 
-function Dashboard() {
+
+export default function Dashboard() {
     const [options, setOptions] = useState(baseOption);
     const [total, setTotal] = useState(0);
     const [party, setParty] = useState(0);
     const [purchaser, setPurchaser] = useState(0);
 
     useEffect(() => {
-
-        fetch("http://localhost:3001/staticData/total", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }).then(res => res.json()).then(data => {
+        fetch("http://localhost:3000/api/bond").then(res => res.json()).then((data : any) => {
             const { formattedData, total, party, purchaser } = data;
-            console.log("final data",data)
             const top = formattedData.slice(0, 9)
             const last = formattedData.slice(10,)
-            const value = last.reduce((a, b) => a + b.value, 0)
-            console.log("top", last)
+            const value = last.reduce((a : any, b : any) => a + b.value, 0)
 
             top.push({name:"OTHERS COMBINED", value, itemStyle: { color: '#868e96' } })
             setOptions({
@@ -58,8 +51,8 @@ function Dashboard() {
                                     decimalScale={2} 
                                     value={total} 
                                     thousandSeparator 
-                                    displayType={'text'}
-                                    renderText={value => <span style={{ marginRight: '0.25em' }}>{value}</span>}
+                                    //displayType={'text'}
+                                    //renderText={(value : any) => <span style={{ marginRight: '0.25em' }}>{value}</span>}
                                 />
                             crores</span>
                         </Text>
@@ -79,4 +72,3 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
