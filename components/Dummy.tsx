@@ -19,7 +19,7 @@ function Dummy() {
     const [data, setData] = useState<incomingData[]>([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/user').then((response) => response.json()).
+        fetch('/api/user').then((response) => response.json()).
             then((data) => {
                 setData(data)
             })

@@ -23,8 +23,7 @@ export default async function GET(req: any, res: any) {
     const finalFY = FYdata.map((fy, index) => {
         obj.push(fy[0])
     })
-    
+
     res.send(obj)
 }
-
 

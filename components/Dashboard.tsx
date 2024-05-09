@@ -15,7 +15,7 @@ export default function Dashboard() {
     const [purchaser, setPurchaser] = useState(0);
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/bond").then(res => res.json()).then((data : any) => {
+        fetch("/api/bond").then(res => res.json()).then((data : any) => {
             const { formattedData, total, party, purchaser } = data;
             const top = formattedData.slice(0, 9)
             const last = formattedData.slice(10,)

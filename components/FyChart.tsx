@@ -9,7 +9,7 @@ function FyChart() {
 
     useEffect(() => {
         
-        fetch("http://localhost:3000/api/FYdata").then(res => res.json())
+        fetch("/api/FYdata").then(res => res.json())
             .then(data => {
                setOptions({
                    ...fybarOptions,

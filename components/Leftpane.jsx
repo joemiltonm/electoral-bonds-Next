@@ -12,7 +12,7 @@ export default function Leftpane() {
 
         setOptions(barBaseOption)
 
-        fetch('http://localhost:3000/api/bond').then(res => res.json()).then(data => {
+        fetch('/api/bond').then(res => res.json()).then(data => {
             const { formattedDataPurchase } = data;
             console.log("purchaseProportion",formattedDataPurchase)
             const name = formattedDataPurchase.map(item => item.name) 

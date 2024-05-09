@@ -13,7 +13,7 @@ export default function Rightpane() {
 
         setOptions(barBaseOption)
 
-        fetch('http://localhost:3000/api/bond').then(res => res.json()).
+        fetch('/api/bond').then(res => res.json()).
         then(data =>
         {
             const { formattedData } = data;
