@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tabs, Text } from '@mantine/core'
 import Dashboard from '../components/Dashboard'
-import QuestionsTab from '../components/QuestionsTab'
+
 
 export default function Home() {
 
