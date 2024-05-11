@@ -8,7 +8,7 @@ import { config } from 'dotenv';
 config();
 
 
-const development = {
+export const production = {
     client: 'pg',
     connection: process.env.DB_CONNECTION,
     pool: {
@@ -20,5 +20,24 @@ const development = {
     }
   }
 
-export default development;
+export const development = {
+  client: 'pg',
+  connection: {
+    host : 'localhost',
+    user : 'postgres',
+    password: 'password',
+    database: 'postgres',
+    port: 5432
+  },
+  pool: {
+    min: 2,
+    max: 10
+  },
+  migrations: {
+    tableName: 'knex_migrations'
+  },
+  seed: {
+    directory: './seeds'
+  }
+}
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Tabs, Text } from '@mantine/core'
 import Dashboard from '../components/Dashboard'
+import QuestionsTab from '../components/QuestionsTab'
 
 
 export default function Home() {
@@ -11,11 +12,8 @@ export default function Home() {
             <Tabs.List justify="center">
                 <Tabs.Tab value="dashboard">
                     <Text fw={600}> Dashboard </Text>
-                </Tabs.Tab>
-              {/* <Tabs.Tab value="messages">
-                  <Text fw={600}> Filter </Text>
-                    
-                </Tabs.Tab> */}
+        </Tabs.Tab>
+        
               <Tabs.Tab value="questions">
                   <Text fw={600}> Most Pertinent Questions </Text>
                     
@@ -26,13 +24,9 @@ export default function Home() {
                 <Dashboard/>
             </Tabs.Panel>
 
-            {/* <Tabs.Panel value="messages">
-                
-            </Tabs.Panel> */}
-
-            {/* <Tabs.Panel value="questions">
+            <Tabs.Panel value="questions">
                 <QuestionsTab/>
-            </Tabs.Panel> */}
+            </Tabs.Panel>
         </Tabs>
   )
 
