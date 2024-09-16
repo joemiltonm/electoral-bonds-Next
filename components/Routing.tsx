@@ -4,7 +4,6 @@ import { AppShell } from "@mantine/core";
 import Rightpane from "./Rightpane";
 import Leftpane from "./Leftpane";
 import Header from "./Header"
-import Footer from "./Footer";
 
 export default function Routing() {
 
@@ -25,9 +24,6 @@ export default function Routing() {
             <AppShell.Aside style={{backgroundColor:"#f8f9fa"}}>
                 <Rightpane/>
             </AppShell.Aside>
-            <AppShell.Footer withBorder={false} style={{marginLeft:'380px',backgroundColor:"#f8f9fa"}}>
-                <Footer/>
-            </AppShell.Footer>
 
         </AppShell>
     )
